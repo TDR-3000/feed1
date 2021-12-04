@@ -71,7 +71,7 @@ public function run(){
     $useragent = (new InstagramController)->uamulti();
     //echo $useragent;
 
-   $stm = DB::table('logins')->pluck('cookie', 'username');
+   $stm = DB::table('logins1')->pluck('cookie', 'username');
    //echo $stm;
    foreach ($stm as $name => $cookies) {
        $cookie = $cookies;
@@ -90,7 +90,7 @@ public function run(){
     $json = json_decode($likes);
 
     if($json->status == 'fail'){
-        $stm = DB::table('logins')->pluck('password', 'username');
+        $stm = DB::table('logins1')->pluck('password', 'username');
         //$datax = json_decode($stm);
         //echo $stm[$username];
         $pwd = $stm[$username];
@@ -101,7 +101,7 @@ public function run(){
         //die(json_encode($json));
         if($json_data->result == true){
         $cookies = $json_data->cookies;
-        // $user = DB::table('logins')->where('username', $username)->get();
+        // $user = DB::table('logins1')->where('username', $username)->get();
         // $id = $user[0]->id;
 
         $UpdateDetails = Login::where('username', '=',  $username)->first();
