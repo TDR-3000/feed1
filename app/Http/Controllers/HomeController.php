@@ -13,7 +13,7 @@ class HomeController extends Controller
 
     public function index(){
 
-    $stm = DB::table('logins')->pluck('id', 'username');
+    $stm = DB::table('logins1')->pluck('id', 'username');
     $data = ['LoggedUserInfo'=>Login::where('username','=', session('LoggedUser'))->first()];
     $xdata = Session::all();
     return view('instagram.home', $data);
