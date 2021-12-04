@@ -5,7 +5,7 @@
     <div class="col-lg-3 order-lg-2">
       <div class="card-profile-image">
 <a href="#">
-<img src="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png" class="rounded-circle">
+<img src="{{ $LoggedUserInfo['avatar'] }}" class="rounded-circle">
 </a>
 </div>
     </div>
